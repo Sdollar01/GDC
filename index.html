@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>$GDC - God & Satan Coin</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    /* 🔥 Background containers */
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .bg-heaven, .bg-hell {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.9;
+    }
+
+    .bg-heaven {
+      top: 0;
+      background-image: url('background1.png');
+      animation: floatHeaven 60s linear infinite;
+    }
+
+    .bg-hell {
+      bottom: 0;
+      background-image: url('background2.png');
+      animation: floatHell 30s linear infinite;
+      mix-blend-mode: screen;
+    }
+
+    @keyframes floatHeaven {
+      from { background-position: center top; }
+      to { background-position: center bottom; }
+    }
+
+    @keyframes floatHell {
+      from { background-position: center bottom; }
+      to { background-position: center top; }
+    }
+
+    header {
+      padding: 50px 20px;
+      color: #fff;
+      position: relative;
+      z-index: 2;
+    }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      animation: glow 2s infinite alternate;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px gold, 0 0 20px yellow; }
+      to { text-shadow: 0 0 20px orange, 0 0 40px red; }
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 15px;
+      padding: 15px 25px;
+      background: gold;
+      color: #000;
+      font-weight: bold;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn:hover {
+      transform: scale(1.1);
+      background: #ffcc00;
+      box-shadow: 0 0 15px gold, 0 0 30px yellow;
+    }
+    .btn.halo:hover {
+      box-shadow: 0 0 20px white, 0 0 40px gold;
+    }
+    .btn.pitchfork:hover {
+      animation: shake 0.5s;
+    }
+    @keyframes shake {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(5deg); }
+      50% { transform: rotate(-5deg); }
+      75% { transform: rotate(5deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    section {
+      padding: 60px 20px;
+      position: relative;
+      z-index: 2;
+    }
+    section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .token-info {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .token-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+      width: 220px;
+      animation: pulse 3s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 5px gold; }
+      50% { box-shadow: 0 0 20px red; }
+      100% { box-shadow: 0 0 5px gold; }
+    }
+
+    /* 🔥 Coin Logo */
+    .coin-slot {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+    }
+
+    .coin-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 5px solid gold;
+      box-shadow: 0 0 20px gold, 0 0 40px red;
+      animation: spin 12s linear infinite;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    footer {
+      background: #111;
+      padding: 30px;
+      font-size: 0.9em;
+      color: #aaa;
+      z-index: 2;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <!-- 🔥 Animated Background -->
+  <div class="background">
+    <div class="bg-heaven"></div>
+    <div class="bg-hell"></div>
+  </div>
+
+  <!-- 🔱 HEADER -->
+  <header>
+    <h1>⚔️ GOD & SATAN COIN ($GDC)</h1>
+    <p>Every Buy = Blessing 🙏 | Every Sell = Sin 🔥</p>
+
+    <!-- 🔥 Replaced swords with spinning coin (using background2.png) -->
+    <div class="coin-slot">
+      <img src="background2.png" alt="$GDC Coin" class="coin-img" />
+    </div>
+
+    <a href="https://pump.fun" class="btn halo">Buy on Pump.fun</a>
+    <a href="https://t.me/GODANDSATANCOIN" class="btn halo">Join Telegram</a>
+    <a href="https://x.com/AndSatan66633" class="btn pitchfork">Follow on X</a>
+  </header>
+
+  <!-- ℹ️ WHAT IS GDC -->
+  <section>
+    <h2>What is $GDC?</h2>
+    <p>The Final Judgment of crypto. The ultimate showdown: God vs Satan, Bulls vs Bears, Degens vs Normies.</p>
+    <p>Every buy is a prayer. Every sell is a sin. Are you ready to choose your side?</p>
+  </section>
+
+  <!-- 📊 TOKENOMICS -->
+  <section>
+    <h2>Tokenomics</h2>
+    <div class="token-info">
+      <div class="token-card">
+        <h3>Total Supply</h3>
+        <p>1,000,000,000 (1B)</p>
+      </div>
+      <div class="token-card">
+        <h3>Distribution</h3>
+        <p>50% Liquidity<br>20% Community<br>10% Team (vested)<br>10% Marketing<br>10% Burn</p>
+      </div>
+      <div class="token-card">
+        <h3>Chain</h3>
+        <p>Solana (Pump.fun)</p>
+      </div>
+      <div class="token-card">
+        <h3>Contract</h3>
+        <p><em>Coming soon...</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 😂 MEME POWER -->
+  <section>
+    <h2>Meme Power</h2>
+    <p>“Blessed are the bagholders, for theirs is the kingdom of Lambo.”</p>
+    <p>Community-driven memes will fuel the rise to Heaven or descent into Hell.</p>
+  </section>
+
+  <!-- 🌐 LINKS -->
+  <section>
+    <h2>Join the Cult</h2>
+    <a href="https://t.me/GODANDSATANCOIN" class="btn halo">Telegram</a>
+    <a href="https://x.com/AndSatan66633" class="btn halo">Twitter</a>
+    <a href="https://pump.fun" class="btn pitchfork">Pump.fun</a>
+  </section>
+
+  <!-- ⚡ FOOTER -->
+  <footer>
+    <p>⚔️ GOD & SATAN COIN ($GDC) — The Final Judgment is Here.</p>
+  </footer>
+</body>
+</html>
